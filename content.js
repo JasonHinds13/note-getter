@@ -31,8 +31,7 @@ $(document).ready(function(){
     //select all items
 
     $("#all").on('click', function(){
-    	$(".check").attr("checked", true);
-
+    	$(".check").click();
     });
 
     //download selected items
