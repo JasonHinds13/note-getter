@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "OurVLE Notes Downloader",
+    "description": "Download Notes From OurVLE",
+    "version": "1.0",
+
+    "browser_action": {
+     "default_popup": "popup.html"
+    },
+
+    "content_scripts": [{
+    	"js": ["jquery-3.1.1.min.js"],
+    	"matches": ["http://*/*", "https://*/*"]
+    }],
+
+    "permissions": ["activeTab", "tabs"]
+}

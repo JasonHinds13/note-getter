@@ -1,0 +1,17 @@
+body{
+	background-color: #fafafa;
+}
+
+ul{
+	list-style: none;
+}
+
+h1{
+	color: white;
+	font-weight: normal;
+	background-color: #f04837;
+}
+
+.note{
+	color: blue;
+}
