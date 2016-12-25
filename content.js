@@ -5,6 +5,10 @@ $(document).ready(function(){
 	chrome.tabs.getSelected(null, function(tab){
         link = tab.url;
 
+        //$.getScript('https://apis.google.com/js/platform.js',function(){
+            //console.log("loaded");
+        //});
+
         $.ajax(link, {
         	method: 'GET'
         }).done(function(res){
@@ -17,6 +21,13 @@ $(document).ready(function(){
         		var a = $(this).find("a").attr("href");
         		list += "<a class='note' href='"+a+"' download='"+a+"'>" + $(this).text() +"</a>";
         		list += "</li><br>";
+
+                //list += "<script src='https://apis.google.com/js/platform.js' async defer></script>";
+                //list += "<div class='g-savetodrive'";
+                //list += "data-src='"+ a +"'";
+                //list += "data-filename='" + a +"'";
+                //list += "data-sitename='OurVLE'>";
+                //list += "</div>";
         	});
 
         	list += "</ul>";
@@ -41,7 +52,7 @@ $(document).ready(function(){
     		var check = this.getElementsByClassName('check')[0];
     		if (check.checked == true){
     			var dl = this.getElementsByClassName('note')[0];
-    			dl.click();
+    			window.open(dl.href);
     		}
     	});
     });
